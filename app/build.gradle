@@ -25,6 +25,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
 }
 
 dependencies {
@@ -54,8 +66,8 @@ dependencies {
     implementation 'com.xwray:groupie:2.3.0'
     implementation 'com.xwray:groupie-kotlin-android-extensions:2.3.0'
 
-    implementation 'com.github.bumptech.glide:glide:4.9.0'
-    kapt 'com.github.bumptech.glide:compiler:4.9.0'
+        implementation 'com.github.bumptech.glide:glide:4.9.0'
+        kapt 'com.github.bumptech.glide:compiler:4.9.0'
 
     implementation 'br.com.simplepass:loading-button-android:2.1.5'
 
@@ -74,5 +86,8 @@ dependencies {
     implementation "androidx.room:room-runtime:2.1.0"
     implementation "androidx.room:room-rxjava2:2.1.0"
     kapt "androidx.room:room-compiler:2.1.0"
+
+    implementation 'com.tapadoo.android:alerter:5.0.0'
+    implementation("io.coil-kt:coil:0.8.0")
 
 }

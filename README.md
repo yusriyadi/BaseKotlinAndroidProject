@@ -7,3 +7,7 @@ Tech Stack :
 - Koin
 - Rxjava2
 - Glide
+- Anko
+- groupie adapter
+- alerter
+- coil
